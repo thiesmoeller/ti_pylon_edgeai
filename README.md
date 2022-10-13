@@ -61,7 +61,7 @@ In order to use a Basler camera with the TI Jacquinto Platform you need to insta
 cd /opt/ti_pylon_edgeai
 sh install.sh
 ```
-> You can now skip over to to [Section 4](#4-run-ti-app_edge_ai-python-example-application-with-pylon-camera):
+> You can now skip over to to [Section 3](#3-run-ti-app_edge_ai-python-example-application-with-pylon-camera):
 
 ### 2.3.2. Manual installation
 ```bash
