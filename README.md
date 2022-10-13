@@ -5,15 +5,15 @@ Support for Basler USB and GigE cameras in the TI edge AI environment
 - [1. Tested environment](#1-tested-environment)
 - [2. Prerequisites](#2-prerequisites)
   - [2.1 Mandatory](#21-mandatory)
-  - [2.2 Recommended:](#22-recommended)
+  - [2.2 Recommended](#22-recommended)
 - [3. Installation](#3-installation)
   - [3.1: Setup SK-TDA4VM for edge_ai_apps](#31-setup-sk-tda4vm-for-edge_ai_apps)
   - [3.2: Clone repository files to target platform](#32-clone-repository-files-to-target-platform)
   - [3.3: Install Pylon and Gstreamer](#33-install-pylon-and-gstreamer)
     - [3.3.1: Install everything by using provided installer script](#331-install-everything-by-using-provided-installer-script)
     - [3.3.2: Manual installation](#332-manual-installation)
-      - [3.3.2.1: Add support for pylon cameras to "edge_ai_apps" source files***](#3321-add-support-for-pylon-cameras-to-edge_ai_apps-source-files)
-      - [3.3.2.2: Install Basler's Gstreamer plugin for pylon cameras***](#3322-install-baslers-gstreamer-plugin-for-pylon-cameras)
+      - [3.3.2.1: Add support for pylon cameras to "edge_ai_apps" source files](#3321-add-support-for-pylon-cameras-to-edge_ai_apps-source-files)
+      - [3.3.2.2: Install Basler's Gstreamer plugin for pylon cameras](#3322-install-baslers-gstreamer-plugin-for-pylon-cameras)
 - [4. Run TI app_edge_ai Python example application with pylon camera](#4-run-ti-app_edge_ai-python-example-application-with-pylon-camera)
 - [5. Use Pylonviewer GUI to configure camera and show raw images (optional)](#5-use-pylonviewer-gui-to-configure-camera-and-show-raw-images-optional)
 - [6. Reference documentation](#6-reference-documentation)
@@ -26,19 +26,19 @@ Support for Basler USB and GigE cameras in the TI edge AI environment
 # 2. Prerequisites
 ## 2.1 Mandatory 
 * [SK-TDA4VM processor starter kit for Edge AI vision systems](https://www.ti.com/tool/SK-TDA4VM)
-* Linux system image: [ti-processor-sdk-linux-sk-tda4vm-etcher-image.zip](https://www.ti.com/tool/download/PROCESSOR-SDK-LINUX-SK-TDA4VM)
+* Linux system image: [ti-processor-sdk-linux-sk-tda4vm-etcher-image.zip](https://dr-download.ti.com/software-development/software-development-kit-sdk/MD-4K6R4tqhZI/08.04.00.10/ti-processor-sdk-linux-sk-tda4vm-etcher-image.zip)
 * [Basler USB or GigE-Camera](https://www.baslerweb.com/)
 * [Balena Etcher](https://www.balena.io/etcher/)
 * SSH connection to SK-TDA4VM
 * SK-TDA4VM must be connected to the Internet
 
-## 2.2 Recommended: 
+## 2.2 Recommended
 * FAN to cool the processor since it gets too hot
 * [Visual Studio Code](https://code.visualstudio.com/) with Remote SSH extension
 
 # 3. Installation
 ## 3.1: Setup SK-TDA4VM for edge_ai_apps
-* Use Balena Etcher to create SD card with target Linux (ti-processor-sdk-linux-sk-tda4vm-etcher-image.zip)
+* Use Balena Etcher to create SD card with target Linux [ti-processor-sdk-linux-sk-tda4vm-etcher-image.zip](https://dr-download.ti.com/software-development/software-development-kit-sdk/MD-4K6R4tqhZI/08.04.00.10/ti-processor-sdk-linux-sk-tda4vm-etcher-image.zip)
 * Insert SD card to target and boot 
 * Connect to target using SSH (hostname: tda4vm-sk, user:root, pwd: root)
 
@@ -79,7 +79,7 @@ cd ..
 rm -r tmp
 ```
 
-#### 3.3.2.1: Add support for pylon cameras to "edge_ai_apps" source files***
+#### 3.3.2.1: Add support for pylon cameras to "edge_ai_apps" source files
 ```bash
 cd /opt/ti_pylon_edgeai
 
@@ -90,7 +90,7 @@ cp pylon_demo.yaml /opt/edge_ai_apps/configs
 patch /opt/edge_ai_apps/apps_python/gst_wrapper.py gst_wrapper.py.patch
 ```
 
-#### 3.3.2.2: Install Basler's Gstreamer plugin for pylon cameras***
+#### 3.3.2.2: Install Basler's Gstreamer plugin for pylon cameras
 The TI edge AI applications are based on Gstreamer pipelines. In order to access pylon cameras using the GStreamer framework you need to install Gstreamer Pylon Plugin to the target system.
 
 > Link to Github including documentation: https://github.com/basler/gst-plugin-pylon
