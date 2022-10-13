@@ -1,4 +1,4 @@
-0.1. **ti_pylon_edgeai**
+**ti_pylon_edgeai**
 ---
 Support for Basler USB and GigE cameras in the TI edge AI environment
 
@@ -47,7 +47,7 @@ cd /opt/edge_ai_apps
 
 ## 2.2. Clone repository files to target platform
 ```bash
-cd /opt/
+cd /opt
 git clone https://github.com/millertheripper/ti_pylon_edgeai.git
 ```
 
@@ -61,7 +61,7 @@ In order to use a Basler camera with the TI Jacquinto Platform you need to insta
 cd /opt/ti_pylon_edgeai
 sh install.sh
 ```
-> You can now skip over to to [Section 3](#3-run-ti-app_edge_ai-python-example-application-with-pylon-camera):
+> You can now skip over to [Section 3](#3-run-ti-app_edge_ai-python-example-application-with-pylon-camera):
 
 ### 2.3.2. Manual installation
 ```bash
@@ -94,7 +94,7 @@ The TI edge AI applications are based on Gstreamer pipelines. In order to access
 
 ```bash
 # Clone git repository "gst-plugin-pylon" 
-cd /opt/
+cd /opt
 git clone https://github.com/basler/gst-plugin-pylon.git
 cd gst-plugin-pylon
 
@@ -122,7 +122,7 @@ gst-launch-1.0 pylonsrc ! "video/x-raw,width=1280,height=720,format=RGB" ! video
 
 # 3. Run TI app_edge_ai Python example application with pylon camera
 ```bash
-cd /opt/edge_ai_apps/apps_python/
+cd /opt/edge_ai_apps/apps_python
 ./app_edgeai.py ../configs/pylon_demo.yaml
 ```
 
