@@ -129,7 +129,7 @@ cd /opt/edge_ai_apps/apps_python/
 ./app_edgeai.py ../configs/pylon_demo.yaml
 ```
 
-> Note 1: Depending on the camera used, you may need to adjust camera parameters (width, height, framerate, pixel format) in pylon_demo.xaml
+> Note 1: Depending on the camera used, you may need to adjust camera parameters (width, height, framerate, pixel format) in pylon_demo.yaml
 
 > Note 2: In case you want to use multiple cameras, you need to provide the serial number of the camera to parameter "sens-id"
 
